@@ -13,7 +13,7 @@ export default function SliderBlogCard({ post }: { post: PostMetadata }) {
         <div className="relative">
             <Link className="" href={`/${post.slug}`}>
                 <div className="relative">
-                    <img src={post.coverImage?.url} className="rounded-lg w-[300px] h-[300px] md:w-full hover:scale-105 transform-gpu transition-transform ease-in-out" alt={post.title} />
+                    <img src={post.coverImage?.url} className="rounded-lg w-[300px] h-[425px] md:w-full hover:scale-105 transform-gpu transition-transform ease-in-out" alt={post.title} />
                     <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-lg"></div>
                 </div>
 

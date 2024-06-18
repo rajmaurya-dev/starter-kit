@@ -25,7 +25,7 @@ export default function Author() {
 
     if (isLoading) {
         return (
-            <Card className="blur-md">
+            <Card className="blur-md rounded-[60px] h-[425px]">
                 <CardHeader className="items-center">
                     <h1 className="font-semibold text-2xl text-center h-8 bg-gray-300 rounded w-3/4 mb-4"></h1>
                     <div className="rounded-full w-28 h-28 bg-gray-300 mb-4"></div>
@@ -49,7 +49,7 @@ export default function Author() {
 
     return (
 
-        <Card className="md:min-h-[300px] md:w-[300px] py-1 text-primary ">
+        <Card className="md:min-h-[300px] md:w-[300px] py-1 text-primary rounded-[60px]">
             <CardHeader className="items-center">
                 <h1 className={`${fira_sans.className}  font-semibold text-2xl text-center`}>{author?.name}</h1>
                 <img src={author?.profilePicture} alt={author?.name} className="rounded-full w-28 h-28" />

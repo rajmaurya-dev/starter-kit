@@ -21,71 +21,78 @@ export default function Social() {
         queryFn: () => getAuthor(username!)
     });
     return (
-        <Card className={`${fira_sans.className} grid grid-cols-3 gap-3 w-full place-content-center py-10 my-5 text-primary`}>
+        <Card className={`${fira_sans.className} flex flex-col gap-5 items-start py-10 my-5 bg-primary`}>
+            <div className='flex gap-5 justify-start items-center px-20'>
             {author?.socialMediaLinks.website && (
-                <div className='flex flex-col-reverse gap-2 items-center'>
-                    <h2>Website</h2>
-                    <Link href={author.socialMediaLinks.website} target="_blank" className="text-blue-500 hover:text-blue-600">
+                <div className='flex items-center w-fit justify-center'>
+                    <Link href={author.socialMediaLinks.website} target="_blank" className="text-[#fef8ee] text-4xl">
                         <TfiLink />
                     </Link>
                 </div>
             )}
             {author?.socialMediaLinks.github && (
-                <div className='flex flex-col-reverse gap-2 items-center'>
-                    <h2>Github</h2>
-                    <Link href={author.socialMediaLinks.github} target="_blank" className="text-blue-500 hover:text-blue-600">
+                <div className='flex items-center w-fit justify-center'>
+                    
+                    <Link href={author.socialMediaLinks.github} target="_blank" className="text-[#fef8ee] text-4xl">
                         <TfiGithub />
                     </Link>
                 </div>
             )}
             {author?.socialMediaLinks.stackoverflow && (
-                <div className='flex flex-col-reverse gap-2 items-center'>
-                    <h2>Stack Overflow</h2>
-                    <Link href={author.socialMediaLinks.stackoverflow} target="_blank" className="text-blue-500 hover:text-blue-600">
+                <div className='flex items-center w-fit justify-center'>
+                
+                    <Link href={author.socialMediaLinks.stackoverflow} target="_blank" className="text-[#fef8ee] text-4xl">
                         <FaStackOverflow />
                     </Link>
                 </div>
             )}
             {author?.socialMediaLinks.twitter && (
-                <div className='flex flex-col-reverse gap-2 items-center'>
-                    <h2>Twitter</h2>
-                    <Link href={author.socialMediaLinks.twitter} target="_blank" className="text-blue-500 hover:text-blue-600">
+                <div className='flex items-center w-fit justify-center'>
+                    
+                    <Link href={author.socialMediaLinks.twitter} target="_blank" className="text-[#fef8ee] text-4xl">
                         <FaSquareXTwitter />
                     </Link>
                 </div>
             )}
+            </div>
+            <div className="flex gap-5 items-center justify-center px-20">
+
+
+
             {author?.socialMediaLinks.linkedin && (
-                <div className='flex flex-col-reverse gap-2 items-center'>
-                    <h2>LinkedIn</h2>
-                    <Link href={author.socialMediaLinks.linkedin} target="_blank" className="text-blue-500 hover:text-blue-600">
+                <div className='flex items-center w-fit justify-center'>
+                    
+                    <Link href={author.socialMediaLinks.linkedin} target="_blank" className="text-[#fef8ee] text-4xl">
                         <TfiLinkedin />
                     </Link>
                 </div>
             )}
             {author?.socialMediaLinks.youtube && (
-                <div className='flex flex-col-reverse gap-2 items-center'>
-                    <h2>Youtube</h2>
-                    <Link href={author.socialMediaLinks.youtube} target="_blank" className="text-blue-500 hover:text-blue-600">
+                <div className='flex items-center w-fit justify-center'>
+                    
+                    <Link href={author.socialMediaLinks.youtube} target="_blank" className="text-[#fef8ee] text-4xl">
                         <FaYoutube />
                     </Link>
                 </div>
             )}
             {author?.socialMediaLinks.instagram && (
-                <div className='flex flex-col-reverse gap-2 items-center'>
-                    <h2>Instagram</h2>
-                    <Link href={author.socialMediaLinks.instagram} target="_blank" className="text-blue-500 hover:text-blue-600">
+                <div className='flex items-center w-fit justify-center'>
+                    
+                    <Link href={author.socialMediaLinks.instagram} target="_blank" className="text-[#fef8ee] text-4xl">
                         <RiCamera2Fill />
                     </Link>
                 </div>
             )}
             {author?.socialMediaLinks.facebook && (
-                <div className='flex flex-col-reverse gap-2 items-center'>
-                    <h2>Facebook</h2>
-                    <Link href={author.socialMediaLinks.facebook} target="_blank" className="text-blue-500 hover:text-blue-600">
+                <div className='flex items-center w-fit justify-center'>
+                    
+                    <Link href={author.socialMediaLinks.facebook} target="_blank" className="text-[#fef8ee] text-4xl">
                         <FaFacebook />
                     </Link>
                 </div>
             )}
+            </div>
+            
         </Card>
     )
 }

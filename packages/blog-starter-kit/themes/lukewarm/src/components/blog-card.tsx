@@ -12,10 +12,10 @@ export default function BlogCard({ post }: { post: PostMetadata }) {
 
     const formattedPublishedDate = format(date, 'MMM dd, yyyy',)
     return (
-        <Card className="flex flex-col md:flex-row   mx-2">
+        <Card className="flex flex-col md:flex-row  mx-2">
             <CardHeader className="md:items-center md:w-[50%] ">
                 <Link className="" href={`/${post.slug}`}>
-                    <img src={post.coverImage?.url} className="rounded-lg w-[300px]  hover:scale-105 transform-gpu transition-transform ease-in-out" alt={post.title} />
+                    <img src={post.coverImage?.url} className="rounded-lg w-[200px]  hover:scale-105 transform-gpu transition-transform ease-in-out" alt={post.title} />
                 </Link>
             </CardHeader>
             <CardContent className="flex flex-col justify-between md:w-[70%] p-6 ">
@@ -24,24 +24,17 @@ export default function BlogCard({ post }: { post: PostMetadata }) {
                         <Link className="" href={`/${post.slug}`}>{post.title}</Link>
                     </h2>
 
-                    <div className={`${fira_sans.className}  flex gap-5 items-center`}>
-                        <div className="flex gap-1 items-center">
-                            <span>By</span>
-                            <p className="font-semibold">
-                                {post.author.name}
-                            </p>
-                        </div>
-                        <p>{formattedPublishedDate}</p>
-
-                    </div>
                 </div>
+                    <div className="flex justify-between items-center">
 
-                <p className={`${eczar.className} text-secondary line-clamp-3 dark:text-white`}>
-                    <Link className="" href={`/${post.slug}`}>
+            
+                    <Link className="underline text-primary" href={`/${post.slug}`}>
 
-                        {post.subtitle || post.content.text}
+                        Read More
                     </Link>
-                </p>
+                
+                <p className="text-primary">{formattedPublishedDate}</p>
+                    </div>
             </CardContent>
         </Card>
     )

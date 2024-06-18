@@ -9,6 +9,7 @@ import { getPosts } from "@/lib/requests";
 import { PostMetadata } from "@/lib/types";
 import { HydrationBoundary, QueryClient, dehydrate } from "@tanstack/react-query";
 import Image from "next/image";
+import { eczar } from "./font";
 
 export default async function Home() {
   const queryClient = new QueryClient()
@@ -39,8 +40,14 @@ export default async function Home() {
           <CardAnimation>
             <Author />
           </CardAnimation>
-          <Newsletter />
+          <div className={`mx-auto flex flex-col items-center py-20 ${eczar.className} h-[207px]`}>
+            <p className="text-center text-2xl">Receive monthly book <br />recommendations</p>
+          <Newsletter title="Count me in!" className="text-base py-2 px-4 w-full rounded-3xl" />
+          </div>
+          <div className="py-7">
+
           <Social />
+          </div>
         </div>
       </section>
 

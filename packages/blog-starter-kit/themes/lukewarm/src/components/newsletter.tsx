@@ -13,8 +13,9 @@ import { subscribeToNewsletter } from "@/lib/requests";
 import { cabin, fira_sans } from "@/app/font";
 type NewsletterProps = {
     className?: string;
+    title?: string;
 };
-export default function Newsletter({ className }: NewsletterProps) {
+export default function Newsletter({ className, title }: NewsletterProps) {
     const [open, setOpen] = useState(false);
     const [email, setEmail] = useState("");
 
@@ -42,7 +43,9 @@ export default function Newsletter({ className }: NewsletterProps) {
     return (
         <Dialog >
             <DialogTrigger asChild>
-                <Button variant="default" className={`py-10 px-4 my-2 text-white text-3xl hover:bg-[#ff5833] border border-card ${className}`}><BsEnvelopePaperHeartFill /> <span className={`${cabin.className} pl-5`}>Newsletter</span> </Button>
+                <Button variant="default" className={`py-10 px-4 my-2 text-white text-3xl hover:bg-[#ff5833] border border-card ${className}`}><BsEnvelopePaperHeartFill /> <span className={`${cabin.className} pl-5`}>{
+                    title ? title : "Send me letters"
+                    }</span> </Button>
             </DialogTrigger>
             <DialogContent>
                 <DialogHeader>
